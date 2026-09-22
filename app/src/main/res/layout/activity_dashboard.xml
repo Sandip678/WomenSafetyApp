@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Title and Plus Icon -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dashboard"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/plusIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_pink"
+            android:background="@drawable/circular_pink_bg"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+    <!-- First Horizontal Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Left Side (Contact List) -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/contactRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF" />
+        </FrameLayout>
+
+        <!-- Right Side (Main Contact Box) -->
+        <FrameLayout
+            android:id="@+id/mainContactBox"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/black_transparent_box"
+                android:gravity="center">
+
+                <!-- Contact Image -->
+                <ImageView
+                    android:id="@+id/mainContactImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_image"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Contact Name -->
+                <TextView
+                    android:id="@+id/mainContactName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Name"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Contact Number -->
+                <TextView
+                    android:id="@+id/mainContactNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Number"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+
+                <!-- Add Contact Icon -->
+                <ImageView
+                    android:id="@+id/addContactIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_pink"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Second Horizontal Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Left Side (Message Box) -->
+        <EditText
+            android:id="@+id/messageBox"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Enter your message"
+            android:background="@drawable/black_transparent_box"
+            android:textColor="#FFFFFF"
+            android:padding="16dp" />
+
+        <!-- Right Side (Google Map) -->
+        <FrameLayout
+            android:id="@+id/mapContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/message_box_bg"
+            android:layout_weight="1">
+            <!-- Google Map will be added here programmatically -->
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Third Horizontal Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Left Side (Generate SOS Button) -->
+        <Button
+            android:id="@+id/generateSOSButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Generate SOS"
+            android:layout_gravity="center"
+            android:padding="16dp" />
+
+        <!-- Right Side (SOS Button and Move to Screen Text) -->
+        <FrameLayout
+            android:id="@+id/sosButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <!-- SOS Button
+            <Button
+                android:id="@+id/sosButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="SOS"
+                android:textSize="20sp"
+                android:background="@drawable/circular_red_bg"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center" />-->
+
+            <!-- Move to Screen Text
+            <TextView
+                android:id="@+id/moveToScreenText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Move to Screen"
+                android:textSize="16sp"
+                android:textColor="#0000FF"
+                android:layout_marginTop="120dp"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true" />-->
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Fourth Horizontal Section (Logout and Delete Buttons) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Logout"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Delete All Contacts Button -->
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete All Contacts" />
+    </LinearLayout>
+</LinearLayout>

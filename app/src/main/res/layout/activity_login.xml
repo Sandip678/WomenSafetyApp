@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Title Container -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
+
+        <!-- Login Form Text -->
+        <TextView
+            android:id="@+id/loginFormText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login Form"
+            android:textSize="28sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- Women Safety App Text -->
+        <TextView
+            android:id="@+id/womenSafetyAppText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Women Safety App"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <!-- Login Form Container -->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/black"
+        android:alpha="0.7"
+        android:layout_centerInParent="true"
+        android:padding="20dp"
+        android:contentDescription="Login form container">
+
+        <!-- Username Field -->
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username_hint"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:background="@drawable/edittext_background"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="text"
+            android:autofillHints="username"
+            android:minHeight="48dp"/>
+
+        <!-- Password Field -->
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password_hint"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:background="@drawable/edittext_background"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="textPassword"
+            android:autofillHints="password"
+            android:minHeight="48dp"/>
+
+        <!-- Show Password Checkbox -->
+        <CheckBox
+            android:id="@+id/showPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_password"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_button"
+            android:background="@drawable/button_background"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="20dp"
+            android:minHeight="48dp"/>
+
+        <!-- Register Text -->
+        <TextView
+            android:id="@+id/registerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_text"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Register Here Button -->
+        <Button
+            android:id="@+id/registerHere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Here"
+            android:textColor="@color/pink"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_background"
+            android:minHeight="48dp"/>
+    </LinearLayout>
+</RelativeLayout>

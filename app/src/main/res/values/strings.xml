@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Women Safety App</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="show_password">Show Password</string>
+    <string name="login_button">Login</string>
+    <string name="register_text">Are you new to WseftyApp? Please Register Here</string>
+    <string name="register_here">Register Here</string>
+</resources>
